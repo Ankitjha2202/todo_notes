@@ -106,6 +106,32 @@ curl http://localhost:3000/api/notes
 [{"id":2,"title":"My First Note","description":"This is a test note","created_at":"2025-01-29T20:49:50.233Z"}]
 ```
 
+### Updating a Note
+
+To update an existing note, use the following command (replace `2` with the actual note ID you want to update):
+
+```bash
+curl -X PUT http://localhost:3000/api/notes/2 -H "Content-Type: application/json" -d '{"title": "Updated Note", "description": "This is an updated test note"}'
+```
+
+**Expected Output:**
+```json
+{"id":2,"title":"Updated Note","description":"This is an updated test note","created_at":"2025-01-29T20:49:50.233Z"}
+```
+
+### Deleting a Note
+
+To delete a note, use the following command (replace `2` with the actual note ID you want to delete):
+
+```bash
+curl -X DELETE http://localhost:3000/api/notes/2
+```
+
+**Expected Output:**
+```json
+{"message":"Note deleted successfully"}
+```
+
 Using `curl` is a convenient way to test and interact with your API directly from the command line.
 
 ## Environment Variables

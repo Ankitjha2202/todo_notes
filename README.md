@@ -11,7 +11,6 @@ A simple RESTful API for managing notes using Node.js, Express, and PostgreSQL. 
 - [API Endpoints](#api-endpoints)
 - [Testing the API with curl](#testing-the-api-with-curl)
 - [Environment Variables](#environment-variables)
-- [License](#license)
 
 ## Features
 

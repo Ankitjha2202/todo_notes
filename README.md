@@ -88,12 +88,22 @@ To create a new note, use the following command:
 curl -X POST http://localhost:3000/api/notes -H "Content-Type: application/json" -d '{"title": "My First Note", "description": "This is a test note"}'
 ```
 
+**Expected Output:**
+```json
+{"id":2,"title":"My First Note","description":"This is a test note","created_at":"2025-01-29T20:49:50.233Z"}
+```
+
 ### Retrieving All Notes
 
 To retrieve all notes, use the following command:
 
 ```bash
 curl http://localhost:3000/api/notes
+```
+
+**Expected Output:**
+```json
+[{"id":2,"title":"My First Note","description":"This is a test note","created_at":"2025-01-29T20:49:50.233Z"}]
 ```
 
 Using `curl` is a convenient way to test and interact with your API directly from the command line.
@@ -108,7 +118,3 @@ Make sure to set the following environment variables in your `.env` file:
 - `DB_NAME`: Database name
 - `DB_PORT`: Database port
 - `PORT`: Port for the Express server (default is 3000)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
